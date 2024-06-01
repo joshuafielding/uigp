@@ -1,0 +1,104 @@
+body{
+    background-color: black;
+}
+
+p{
+    color: white;
+}
+h1{
+    color: white;
+}
+
+/* CONTAINER FOR WHOLE PAGE */
+.container {
+    position: fixed;
+    width: 98%;
+    height: 98%;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center; /* Center the container content horizontally */
+}
+
+/* enemy section */
+.center {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 95vh;
+    margin-bottom: 100px;
+}
+
+#enemyhealth {
+    text-align: center;
+    width: 15vh;
+    height: 3vh;
+    background-color: red;
+    margin: 10px;
+    
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.enemymodel{
+    width: 30vh;
+    height: 23vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    background-image: url('pic/sewer.jpg');
+    background-size: cover;
+    background-position: center;
+    
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 15px;
+    padding: 10px;
+    padding: 3em;
+}
+
+.enemymodel img {
+    max-width: 20vh;
+    max-height: 20vh;
+    
+    border: 2px solid rgb(255, 0, 0);
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.spells{
+    position: absolute;
+    bottom: 10%;
+    max-width: 33%;
+    
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 15px;
+    padding: 10px;
+}
+
+
+/* Quest Section Styles */
+.quests {
+    width: 20vh;
+    height: 20vh;
+    text-align: center;
+    
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 15px;
+    padding: 10px;
+}
+
+/* Party Styles */
+.party {
+    width: 20vh;
+    height: 70vh;
+    text-align: center;
+    
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 15px;
+    padding: 10px; 
+}
