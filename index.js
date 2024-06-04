@@ -1,6 +1,6 @@
 let healthbar = 25;
 let previoushealthbar = 25;
-let playerdamage = 15;
+let playerdamage = 1;
 let saveplayerdamage;
 let critchance = 1;
 let gold = 0;
