@@ -4,11 +4,15 @@
 }
 
 body {
-    background-color: rgb(0, 0, 0);
-    color: black;
+    background-image: url(pic/nighttimebig.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
     margin: 0;
     padding: 0;
     font-family: Alhkemikal;
+    text-shadow: -3px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000, 3px 3px 0 #000;
+
 }
 
 .container {
@@ -25,9 +29,6 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 5vh;
-    animation-name: rainbowloop;
-    animation-iteration-count: infinite;
-    animation-duration: 20s;
 }
 
 .username{
@@ -37,41 +38,68 @@ body {
 .password{
     margin-bottom: 3%;
 }
-
+ 
 #submit{
     font-family: Alhkemikal;
-    background-color: black;
-    border-width: 0.5vh;
+    background-color: hsla(0, 0%, 0%, 0.535);
     border-radius: 15px;
+    border: 0.5vh solid black;
     font-size: 7vh;
-    color: black;
+    text-shadow: -3px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000, 3px 3px 0 #000;
+    color: white;
     padding: 1vh;
-    animation: rainbowloop 20s infinite, bordercolor 20s infinite;
+}
+
+.topright{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    padding: 2vh;
+}
+
+.topright img{
+    width: 7vh;
+    background-color:hsla(0, 0%, 0%, 0.535);
+    color: white;
+}
+
+.settings{
+    display: none;   
+    background-color:hsla(0, 0%, 0%, 0.535);
+    box-shadow: 0px 0px 0px black;
+    width: 100%;
+    font-size: 5vh;
+}
+
+.settings button{
+    font-family: Alhkemikal;
+    background-color: hsla(0, 0%, 0%, 0.535);
+    border: 0.5vh solid black;
+    font-size: 3vh;
+    text-shadow: -3px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000, 3px 3px 0 #000;
+    color: white;
+    
+}
+
+.topright:hover #gearicon{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    padding: 2vh;
+    display: none;
+}
+
+.topright:hover .settings{
+    display: block;
+    text-align: center;
+    position: relative;
+    top: 100%;
+    right: 0px;
 }
 
 .credits{
+    position: absolute;
     align-self: flex-end;
     justify-self: flex-end;
-}
-
-@keyframes rainbowloop{
-    12.5%{color: lightpink};
-    25%{color: lightcoral};
-    37.5%{color: LemonChiffon};
-    50%{color: palegreen};
-    62.5%{color: cyan};
-    75%{color: steelblue};
-    87.5%{color: slateblue};
-    100%{color: purple};
-}
-
-@keyframes bordercolor{
-    12.5%{border-color: lightpink};
-    25%{border-color: lightcoral};
-    37.5%{border-color: LemonChiffon};
-    50%{border-color: palegreen};
-    62.5%{border-color: cyan};
-    75%{border-color: steelblue};
-    87.5%{border-color: slateblue};
-    100%{border-color: purple};
+    left: 2vh;
 }

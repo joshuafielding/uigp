@@ -3,30 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>uigp sign in</title>
+    <title>UIGP Sign In</title>
     <link rel="stylesheet" href="homepage.css">
+    <link rel="icon" href="pic/rat.gif">
 </head>
 <body>
+    <audio id="background-music" loop autoplay>
+        <source src="music/Main Theme.wav" type="audio/mpeg">
+    </audio>
     <div class="container">
+
+        <div class="credits">
+            <p>Made by:<br>UIGP Studios</p>
+         </div>
+
         <div class="center">
            <center> <h1>Clicker Adventure 2: <br>The First One</h1></center>
-            
-            <!--
-            <div class="username">
-                <label>Username:</label>
-                <input id="username">
-            </div>
-
-            <div class="password">
-                <label>Password:</label>
-                <input id="password">
-            </div>   
-            -->
             <a href="uigp.html"><button id="submit">enter</button></a>
-
         </div>
-        <div class="credits"><p>Font License: </p></div>
+        <div class="topright">
+            <img src="pic\settings_24dp_FILL0_wght400_GRAD0_opsz24.png" id="gearicon">
+            <div class="settings">
+                <label>volume</label>
+                <input id="volumeinput"><br>
+                <button id="volumesubmit">Apply changes</button>
+                <p id="volumeerror" style="font-size: x-large;"></p>
+            </div>
+        </div>
     </div>
-    <script src="homepage.js"></script>
+
+    <script src="homepage.js">
+
+    </script>
 </body>
 </html>
