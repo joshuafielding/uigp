@@ -7,7 +7,24 @@ let gold = 0;
 let goldgain;
 let xp = 0;
 
-//enemy array, can create multiple for differnt areas.
+// Load saved xp and gold from localStorage
+if (localStorage.getItem("xp")) {
+    xp = parseInt(localStorage.getItem("xp"), 10);
+}
+if (localStorage.getItem("gold")) {
+    gold = parseInt(localStorage.getItem("gold"), 10);
+}
+
+// Update the DOM with saved values
+document.getElementById("xp").textContent = xp;
+document.getElementById("gold").textContent = gold;
+
+//gets username from homepage
+const username = localStorage.getItem("username");
+document.getElementById("username").textContent = username;
+console.log(username);
+
+//enemy array, can create multiple for different areas.
 const enemies = [
     'pic/rat.gif',
     'pic/skel.gif',
@@ -35,6 +52,7 @@ function calccritchance(){
 
 //the clicking part of the game :D
 document.getElementById("enemysprite").onclick = function() {
+    console.profile();
     if (healthbar > 0) {
         
         const crithit = calccritchance();
@@ -66,17 +84,22 @@ document.getElementById("enemysprite").onclick = function() {
 
             //player gains gold
             goldgain = Math.trunc(Math.random()*6-1)+1;
-            gold += goldgain
+            gold += goldgain;
             document.getElementById("gold").textContent = gold;
             document.getElementById("goldgain").textContent = "Gold gained: +" + goldgain;
+
+            // Save gold to localStorage
+            localStorage.setItem("gold", gold);
 
             //player gains xp
             xp += Math.trunc(Math.random()*3-1)+1;
             document.getElementById("xp").textContent = xp;
+
+            // Save xp to localStorage
+            localStorage.setItem("xp", xp);
         } else {
             document.getElementById("enemyhealth").textContent = Math.trunc(healthbar);
         }  
-    }/* else {
-
-    }*/
+    }
+    
 }

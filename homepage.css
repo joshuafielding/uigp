@@ -1,5 +1,77 @@
-body{
+@font-face {
+    font-family: Alhkemikal;
+    src: url("fonts/Alkhemikal.ttf");
+}
+
+body {
+    background-color: rgb(0, 0, 0);
+    color: black;
+    margin: 0;
+    padding: 0;
+    font-family: Alhkemikal;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 5vh;
+    animation-name: rainbowloop;
+    animation-iteration-count: infinite;
+    animation-duration: 20s;
+}
+
+.username{
+    margin-bottom: 3%;
+}
+
+.password{
+    margin-bottom: 3%;
+}
+
+#submit{
+    font-family: Alhkemikal;
     background-color: black;
-    color: white;
-    text-align: center;
+    border-width: 0.5vh;
+    border-radius: 15px;
+    font-size: 7vh;
+    color: black;
+    padding: 1vh;
+    animation: rainbowloop 20s infinite, bordercolor 20s infinite;
+}
+
+.credits{
+    align-self: flex-end;
+    justify-self: flex-end;
+}
+
+@keyframes rainbowloop{
+    12.5%{color: lightpink};
+    25%{color: lightcoral};
+    37.5%{color: LemonChiffon};
+    50%{color: palegreen};
+    62.5%{color: cyan};
+    75%{color: steelblue};
+    87.5%{color: slateblue};
+    100%{color: purple};
+}
+
+@keyframes bordercolor{
+    12.5%{border-color: lightpink};
+    25%{border-color: lightcoral};
+    37.5%{border-color: LemonChiffon};
+    50%{border-color: palegreen};
+    62.5%{border-color: cyan};
+    75%{border-color: steelblue};
+    87.5%{border-color: slateblue};
+    100%{border-color: purple};
 }
