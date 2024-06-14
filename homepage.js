@@ -1,4 +1,5 @@
 const backgroundMusic = document.getElementById('background-music');
+backgroundMusic.volume = 0.4;
 
 document.getElementById("volumesubmit").onclick = function(){
     let volumepercentage = document.getElementById("volumeinput").value;

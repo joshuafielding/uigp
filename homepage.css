@@ -103,3 +103,15 @@ body {
     justify-self: flex-end;
     left: 2vh;
 }
+
+.fontcredits{
+    position: absolute;
+    align-self: flex-end;
+    justify-self: flex-end;
+    right: 2vh;
+}
+
+.fontcredits a{
+    text-decoration: none;
+    color: white;
+}
