@@ -40,66 +40,79 @@ function getrandomenemy() {
 
 //calculating critical hit chance:
 function calccritchance(){
-    let randomchance = Math.ceil(Math.random() * 10)-1
+    let randomchance = Math.ceil(Math.random() * 10) - 1;
     console.log(randomchance);
-    if (critchance > randomchance){
-        return true;
-    }
-    else{
-        return false;
-    }
+    return critchance > randomchance;
 }
 
-//the clicking part of the game :D
-document.getElementById("enemysprite").onclick = function() {
+//function for the onclick event
+function enemyClickHandler() {
     console.profile();
     if (healthbar > 0) {
-        
         const crithit = calccritchance();
 
         //if the critical hit chance succeeds, we multiply the playerdamage variable
-        if(crithit == true){
+        if(crithit) {
             document.getElementById("crittext").style.visibility = "visible";
             saveplayerdamage = playerdamage;
             playerdamage *= 3.5;
             healthbar -= playerdamage;
             playerdamage = saveplayerdamage;
-        }
-        else{
+        } else {
             healthbar -= playerdamage;
             document.getElementById("crittext").style.visibility = "hidden";
         }
 
-        //if the healthbar hits 0 it won't display negative values
-        if (healthbar <= 0) {
-            
-            //wasn't sure how to scale the health so i just have this for now. 
-            previoushealthbar *= 1.25;
-            healthbar = previoushealthbar;
-
-            //allows for image change
-            const randomenemy = getrandomenemy();
-            document.getElementById("enemysprite").src = randomenemy;
-            document.getElementById("enemyhealth").textContent = Math.trunc(healthbar);
-
-            //player gains gold
-            goldgain = Math.trunc(Math.random()*6-1)+1;
-            gold += goldgain;
-            document.getElementById("gold").textContent = gold;
-            document.getElementById("goldgain").textContent = "Gold gained: +" + goldgain;
-
-            // Save gold to localStorage
-            localStorage.setItem("gold", gold);
-
-            //player gains xp
-            xp += Math.trunc(Math.random()*3-1)+1;
-            document.getElementById("xp").textContent = xp;
-
-            // Save xp to localStorage
-            localStorage.setItem("xp", xp);
-        } else {
-            document.getElementById("enemyhealth").textContent = Math.trunc(healthbar);
-        }  
+        // Update healthbar display
+        document.getElementById("enemyhealth").textContent = Math.trunc(healthbar);
     }
-    
+}
+
+//function to handle enemy defeat
+function handleEnemyDefeat() {
+    if (healthbar <= 0) {
+        previoushealthbar *= 1.25;
+        healthbar = previoushealthbar;
+
+        // Change the enemy sprite
+        const randomenemy = getrandomenemy();
+        document.getElementById("enemysprite").src = randomenemy;
+        document.getElementById("enemyhealth").textContent = Math.trunc(healthbar);
+
+        // Player gains gold
+        goldgain = Math.trunc(Math.random() * 6) + 1;
+        gold += goldgain;
+        document.getElementById("gold").textContent = gold;
+        document.getElementById("goldgain").textContent = "Gold gained: +" + goldgain;
+
+        // Save gold to localStorage
+        localStorage.setItem("gold", gold);
+
+        // Player gains xp
+        xp += Math.trunc(Math.random() * 3) + 1;
+        document.getElementById("xp").textContent = xp;
+
+        // Save xp to localStorage
+        localStorage.setItem("xp", xp);
+    }
+}
+
+//checks if enemy health is below 0
+setInterval(handleEnemyDefeat, 100);
+
+// when the player clicks we run this function
+document.getElementById("enemysprite").onclick = enemyClickHandler;
+
+
+document.getElementById("fireball").onclick = function() {
+    healthbar -= 50;
+    oldsprite = document.getElementById("enemysprite").src;
+    document.getElementById("enemysprite").src = 'pic/explosion.gif';
+    document.getElementById("enemyhealth").textContent = Math.trunc(healthbar);
+}
+
+document.getElementById("frog").onclick = function() {
+    healthbar = 1;
+    document.getElementById("enemysprite").src = 'pic/frog.png';
+    document.getElementById("enemyhealth").textContent = Math.trunc(healthbar);
 }

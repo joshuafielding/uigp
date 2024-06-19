@@ -1,12 +1,17 @@
 body {
-    background-color: black;
+    background-image: url(pic/sewerblurry.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: Alhkemikal;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
+
 p, h1, h3 {
-    margin: 10px;
+    margin: 1vh;
 }
 
 .container {
@@ -24,7 +29,7 @@ p, h1, h3 {
     display: flex;
     flex-direction: column;
     align-self: flex-start;
-    width: 15%;
+    width: 20%;
     min-width: 150px;
     max-height: 55vh;
     padding: 10px;
@@ -33,7 +38,7 @@ p, h1, h3 {
 
 .gold{
     color: white;
-    border: 2px solid white;
+    background-color: rgba(0, 0, 0, 0.5);
     border-radius: 15px;
     margin-bottom: 20vh;
     padding: 2vh;
@@ -44,7 +49,7 @@ p, h1, h3 {
 
 .quests{
     color: white;
-    border: 2px solid white;
+    background-color: rgba(0, 0, 0, 0.5);
     border-radius: 15px;
 }
 
@@ -65,7 +70,7 @@ p, h1, h3 {
     text-align: center;
     width: 10vh;
     height: 3vh;
-    background-color: red;
+    background-color: rgba(255, 0, 0, 0.661);
     margin: 10px;
     border: 2px solid rgb(79, 0, 0);
     border-radius: 15px;
@@ -81,12 +86,14 @@ p, h1, h3 {
     display: flex;
     flex-direction: column;
     align-items: center;
+
     /*MOVES ENEMY TO THE BOTTOM OF THE ENEMY CONTAINER*/
     justify-content: flex-end;
+
     background-image: url('pic/sewer.jpg');
     background-size: cover;
     background-position: center;
-    border: 2px solid white;
+
     border-radius: 15px;
     padding: 10px;
 }
@@ -96,7 +103,6 @@ p, h1, h3 {
     max-height: auto;
     min-width: 20vh;
     min-height: auto;
-    border: 2px solid rgb(255, 255, 255);
     border-radius: 15px;
     padding: 10px;
     
@@ -106,21 +112,28 @@ p, h1, h3 {
     color: white;
     position: relative;
     width: 100%;
-    border: 2px solid white;
+    background-color: rgba(0, 0, 0, 0.5);
     border-radius: 15px;
     padding: 10px;
     max-width: 50vh;
     max-height: 10vh;
     overflow-y: hidden;
     margin-top: 6%;
+    text-align: center;
+}
+
+.spells img{
+    max-width: 4vh;
+    padding: 1vh;
 }
 
 .party {
     color: white;
-    width: 15%;
+    width: 20%;
     min-width: 150px;
+    min-height: 50%;
     height: auto;
-    border: 2px solid white;
+    background-color: rgba(0, 0, 0, 0.5);
     border-radius: 15px;
     padding: 10px;
     box-sizing: border-box;
