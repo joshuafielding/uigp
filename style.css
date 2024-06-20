@@ -1,5 +1,5 @@
 body {
-    background-image: url(pic/sewerblurry.jpg);
+    background-image: url(pic/bg.png);
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
@@ -38,7 +38,8 @@ p, h1, h3 {
 
 .gold{
     color: white;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: #B88566;
+    border: 3px solid #491D04;
     border-radius: 15px;
     margin-bottom: 20vh;
     padding: 2vh;
@@ -49,10 +50,16 @@ p, h1, h3 {
 
 .quests{
     color: white;
-    background-color: rgba(0, 0, 0, 0.5);
+    border: 3px solid #491D04;
+    background-color: #B88566;
     border-radius: 15px;
+    height: fit-content;
 }
 
+.quest-box{
+    background-color: #906a53;
+    border-radius: 15px;;
+}
 
 
 .center {
@@ -68,14 +75,14 @@ p, h1, h3 {
 #enemyhealth {
     color: white;
     text-align: center;
-    width: 10vh;
-    height: 3vh;
+    width: 59%;
+    height: 2vh;
     background-color: rgba(255, 0, 0, 0.661);
-    margin: 10px;
+    margin: 15px;
+    margin-right: 25px;
     border: 2px solid rgb(79, 0, 0);
-    border-radius: 15px;
     padding: 10px;
-    max-width: 20%;
+    max-width: 50%;
 }
 
 .enemymodel {
@@ -90,9 +97,9 @@ p, h1, h3 {
     /*MOVES ENEMY TO THE BOTTOM OF THE ENEMY CONTAINER*/
     justify-content: flex-end;
 
-    background-image: url('pic/sewer.jpg');
     background-size: cover;
     background-position: center;
+    /*background-image: url(pic/sewer.jpg);*/
 
     border-radius: 15px;
     padding: 10px;
@@ -112,31 +119,49 @@ p, h1, h3 {
     color: white;
     position: relative;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: #B88566;
     border-radius: 15px;
     padding: 10px;
-    max-width: 50vh;
-    max-height: 10vh;
+    max-width: 70vh;
+    max-height: 20vh;
     overflow-y: hidden;
-    margin-top: 6%;
+    margin-top: 2%;
     text-align: center;
+    border: 3px solid #491D04;
 }
 
 .spells img{
-    max-width: 4vh;
+    max-width: 7vh;
     padding: 1vh;
+    margin-left: 2%;
 }
+
+
+#spells img:hover{
+    animation-name: scalingTime;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes scalingTime{
+    100%{transform: scale(1.5);}
+}
+
 
 .party {
     color: white;
     width: 20%;
     min-width: 150px;
-    min-height: 50%;
+    min-height: 30%;
     height: auto;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: #B88566;
     border-radius: 15px;
     padding: 10px;
     box-sizing: border-box;
+    border: 3px solid #491D04;
+    margin-bottom: 30%;
+    margin-right: 1%;
 }
 
 /* Media Queries */
