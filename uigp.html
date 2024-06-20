@@ -15,11 +15,27 @@
             <div class="gold">
                 <h3 style="display: inline; margin-right: 0px;">Gold:</h3>
                 <h3 id="gold" style="display: inline; margin-left: 0px;">0</h3>
-                <p id="goldgain" style="color: white;">Gold gained: +0</p>
+                <p id="goldgain" style="color: white; margin-bottom: 20px;">Gold gained: +0</p>
+
+                <h3 style="display: inline; margin-right: 0px;">Kill Count:</h3>
+                <h3 id="kills" style="display: inline; margin-left: 0px; color: red;">0</h3>
             </div>
+
+
+
             <div class="quests">
-                <h1>Quests</h1>
-                <p>1. Kill ten enemies (0/10)</p>
+                <h1>Quests</h1><hr>
+
+                <div class="quest-box">
+                    <h3 id="challenge1task">Quest #1: Kill 10 Enemies</h3>
+
+                    <span id="challenge1">
+                        <p style="display: inline-block;">Enemies Killed: </p>
+                        <p style="display: inline-block;" id="quest1Kills">0</p>
+                    </span>
+                </div>
+
+
             </div>
         </div>
         
@@ -32,7 +48,7 @@
             </div>
         
             <div class="spells" id="spells">
-                <h1>spells</h1>
+                <h1 style="margin-bottom: 1;">Spells</h1>
                 <!--fireball does damage-->
                 <img id="fireball" src="pic/fireball.jpg">
                 <!--turns them to frog-->
@@ -49,7 +65,7 @@
         <div class="party" id="party">
             <h1>Party</h1>
             <h3 id="username">player</h3>
-            <p style="display: inline; padding-right: 0px; margin-right: 0px;">xp:</p>
+            <p style="display: inline; padding-right: 0px; margin-right: 0px;">User #1 XP:</p>
             <p id="xp" style="display: inline; padding-left: 0px; margin-left: 0px;">0</p>
         </div>
 
