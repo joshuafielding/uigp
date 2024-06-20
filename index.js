@@ -6,6 +6,7 @@ let critchance = 1;
 let gold = 0;
 let goldgain;
 let xp = 0;
+let kills = 0;
 
 // Load saved xp and gold from localStorage
 if (localStorage.getItem("xp")) {
@@ -94,8 +95,22 @@ function handleEnemyDefeat() {
 
         // Save xp to localStorage
         localStorage.setItem("xp", xp);
+
+        // Kill Count Increases
+        kills+= 1;
+        document.getElementById("kills").textContent = kills;
+
+        //Quest #1
+        document.getElementById("quest1Kills").textContent = kills;
+
+        if(kills == 10){
+            document.getElementById("challenge1").textContent = "Challenge Completed";
+            document.getElementById("challenge1").style.color = "#14b840", document.getElementById("challenge1task").style.color = "#14b840";
+        }
     }
 }
+
+
 
 //checks if enemy health is below 0
 setInterval(handleEnemyDefeat, 100);
