@@ -27,11 +27,16 @@
                 <h1>Quests</h1><hr>
 
                 <div class="quest-box">
-                    <h3 id="challenge1task">Quest #1: Kill 10 Enemies</h3>
-
-                    <span id="challenge1">
-                        <p style="display: inline-block;">Enemies Killed: </p>
-                        <p style="display: inline-block;" id="quest1Kills">0</p>
+                    <h4 style="display: inline-block; " id="quest">Quest #</h4>
+                    <h4 style="display: inline-block;" id="questnum"></h4>
+                    <h4 style="display: inline-block;" id="quest">: Kill</h4>
+                    <h4 style="display: inline-block;" id="killsneeded"></h4>
+                    <h4 style="display: inline-block;" id="questenemy"></h4>
+                    <br>
+                    <span id="challenge">
+                        <p style="display: inline-block;" id="questenemy"></p>
+                        <p style="display: inline-block;"> Killed: </p>
+                        <p style="display: inline-block;" id="questkills">0</p>
                     </span>
                 </div>
 
@@ -43,8 +48,8 @@
         <div class="center" id="enemy">
             <div class="enemymodel" id="enemymodel">
                 <p style="color: red; font-size: 4vh; visibility: hidden; -webkit-text-stroke: 1px rgb(255, 153, 153);" id="crittext">critical hit!</p>
-                <p id="enemyhealth"> 25 </p>
-                <img id="enemysprite" src="pic/rat.gif" alt="Enemy Sprite">
+                <p id="enemyhealth"> 10 </p>
+                <img id="enemysprite" src="pic/slime.gif" alt="Enemy Sprite">
             </div>
         
             <div class="spells" id="spells">

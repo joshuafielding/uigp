@@ -1,5 +1,5 @@
 body {
-    background-image: url(pic/bg.png);
+    background-image: url(pic/meadow.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
@@ -57,8 +57,10 @@ p, h1, h3 {
 }
 
 .quest-box{
-    background-color: #906a53;
-    border-radius: 15px;;
+    padding-left: 2vh;
+    margin-top: 0px;
+    margin: 0px;
+    display: inline;
 }
 
 
@@ -112,8 +114,15 @@ p, h1, h3 {
     min-height: auto;
     border-radius: 15px;
     padding: 10px;
-    
 }
+
+.enemymodel img.bigger {
+    max-width: 50vh;
+    max-height: auto;
+    min-width: 50vh;
+    min-height: auto;
+}
+
 
 .spells {
     color: white;
@@ -140,12 +149,13 @@ p, h1, h3 {
 #spells img:hover{
     animation-name: scalingTime;
     animation-duration: 1s;
-    animation-iteration-count: infinite;
+    /*makes it so the animation doesn't loop*/
+    animation-fill-mode: forwards;
 }
 
 
 @keyframes scalingTime{
-    100%{transform: scale(1.5);}
+    100%{transform: scale(1.2);}
 }
 
 
