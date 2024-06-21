@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loadpage</title>
+    <style>
+        @font-face {
+            font-family: Alhkemikal;
+            src: url("fonts/Alkhemikal.ttf");
+        }
+        h1{
+            margin: 1vh;
+            font-size: 7vh;
+            color: #B88566;
+            text-shadow: 3px 3px 0 #000;
+        }
+        body {
+            background-image: url(pic/meadow.jpeg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: white;
+            margin: 0;
+            padding: 0;
+            font-family: Alhkemikal;
+        }
+
+        .center-bottom-tutorial {
+            position: absolute;
+            bottom: 20px; /* Adjust the distance from the bottom */
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        #submit{
+            font-family: Alhkemikal;
+            background-color: #B88566;
+            border-radius: 15px;
+            text-align: center;
+            justify-content: center;
+            height: 7vh;
+            width: 10vh;
+            text-shadow: 3px 3px 0 #000;
+            border: 0.5vh solid black;
+            font-size: 4vh;
+            color: white;
+            padding: 1vh;
+        }
+
+        #tutorial-button{
+            font-family: Alhkemikal;
+            background-color: #B88566;
+            border-radius: 15px;
+            text-align: center;
+            justify-content: center;
+            height: 7vh;
+            width: auto;
+            text-shadow: 3px 3px 0 #000;
+            border: 0.5vh solid black;
+            font-size: 4vh;
+            color: white;
+            padding: 1vh;
+        }
+
+        .herocontainer {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around; /*Adjust spacing between hero slots */
+            align-items: center; /* Align items vertically if needed */
+            height: 100vh; 
+        }
+
+        .heroslot {
+            height: 70vh;
+            width: 50vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Center items vertically */
+            align-items: center; /* Center items horizontally */
+            background-size: cover;
+            background-position: center;
+            background-image: url('pic/manuscript.png');
+            border-radius: 15px;
+            padding: 10px;
+        }
+
+        .heroslot img {
+            max-width: 20vh;
+            max-height: 25vh;
+            min-width: 20vh;
+            min-height: auto;
+            border-radius: 15px;
+            padding: 10px;
+        }
+
+        /* Popup container - can be anything you want */
+        .popup {
+        font-family: Alhkemikal;
+        background-color: #B88566;
+        border-radius: 15px;
+        text-align: center;
+        justify-content: center;
+        height: 6vh;
+        width: 9vh;
+        border: 0.5vh solid black;
+        text-shadow: 3px 3px 0 #000;
+        font-size: 4vh;
+        color: white;
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+        }
+
+        /* The actual popup */
+        .popup .popuptext {
+        visibility: hidden;
+        width: 160px;
+        background-color: #555;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 8px 0;
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        left: 50%;
+        margin-left: -80px;
+        }
+
+        /* Popup arrow */
+        .popup .popuptext::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #555 transparent transparent transparent;
+        }
+
+        /* Toggle this class - hide and show the popup */
+        .popup .show {
+        visibility: visible;
+        -webkit-animation: fadeIn 1s;
+        animation: fadeIn 1s;
+        }
+
+        /* Add animation (fade in the popup) */
+        @-webkit-keyframes fadeIn {
+        from {opacity: 0;} 
+        to {opacity: 1;}
+        }
+
+        @keyframes fadeIn {
+        from {opacity: 0;}
+        to {opacity:1 ;}
+        }
+    </style>
+</head>
+<body>
+    <div class="herocontainer">
+        <div class="center-bottom-tutorial">
+            <a href="tutorialpage.html"><button id="tutorial-button">How to Play</button></a>
+        </div>
+
+        <div class="heroslot" id="slot1">
+            <h1>Love</h1>
+            <img id="herosprite" src="pic/ethanocbig.gif">
+            <a href="uigp.html"><button id="submit">Enter</button></a>
+            <a href="shopage.html"><button id="submit">Shop</button></a>
+            <div class="popup" onclick="popFunction1()">Info
+                <span class="popuptext" id="myPopup1">Kill Count: 0 <br> Gold: 421 <br> XP: 251 <br> Quest: 1</span>
+            </div>
+        </div>
+
+        <div class="heroslot" id="slot2">
+            <h1>Nymeia</h1>
+            <img id="herosprite" src="pic/nymeia.gif">
+            <a href="uigp.html"><button id="submit">Enter</button></a>
+            <a href="uigp.html"><button id="submit">Shop</button></a>
+            <div class="popup" onclick="popFunction2()">Info
+                <span class="popuptext" id="myPopup2">Kill Count: 0 <br> Gold: 0 <br> XP: 0 <br> Quest: 1</span>
+            </div>
+        </div>
+
+        <div class="heroslot" id="slot3">
+            <h1>Hero 3</h1>
+            <a href="uigp.html"><button id="submit">Start</button></a>
+        </div>
+    </div>
+
+    <script>
+        // When the user clicks on div, open the popup
+        function popFunction1() {
+        var popup = document.getElementById("myPopup1");
+        popup.classList.toggle("show");
+        }
+        function popFunction2() {
+        var popup = document.getElementById("myPopup2");
+        popup.classList.toggle("show");
+        }
+    </script>
+</body>
+</html>
