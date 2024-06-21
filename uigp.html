@@ -12,6 +12,7 @@
         
         <!--left side-->
         <div class="left">
+
             <div class="gold">
                 <h3 style="display: inline; margin-right: 0px;">Gold:</h3>
                 <h3 id="gold" style="display: inline; margin-left: 0px;">0</h3>
@@ -22,32 +23,43 @@
             </div>
 
 
-
             <div class="quests">
-                <h1>Quests</h1><hr>
-
+                <h1 style="margin-bottom: 25px;">Quests</h1>
                 <div class="quest-box">
-                    <h4 style="display: inline-block; " id="quest">Quest #</h4>
-                    <h4 style="display: inline-block;" id="questnum"></h4>
-                    <h4 style="display: inline-block;" id="quest">: Kill</h4>
-                    <h4 style="display: inline-block;" id="killsneeded"></h4>
-                    <h4 style="display: inline-block;" id="questenemy"></h4>
-                    <br>
+                    <hr>
+                    <h4 id="quest">Quest</h4>
+                    <h4 id="questnum"></h4>
+                    <h4 id="quest">Kill</h4>
+                    <h4 id="killsneeded"></h4>
+                    <h4 id="questenemy"></h4>
+
+
                     <span id="challenge">
-                        <p style="display: inline-block;" id="questenemy"></p>
+                        <p style="display: inline-block;" id="questenemyname"></p>
                         <p style="display: inline-block;"> Killed: </p>
                         <p style="display: inline-block;" id="questkills">0</p>
                     </span>
                 </div>
-
-
             </div>
+
+
         </div>
         
         <!--all center divs-->
         <div class="center" id="enemy">
+
+            <div id="menu">
+
+                <a href="index.html"><button id="submit">Title Screen</button></a>
+                <a href="uigp.html"><button id="submit">Main Menu</button></a>
+                <a href="uigp.html"><button id="submit">Save Game</button></a>
+            </div>
+
+
             <div class="enemymodel" id="enemymodel">
                 <p style="color: red; font-size: 4vh; visibility: hidden; -webkit-text-stroke: 1px rgb(255, 153, 153);" id="crittext">critical hit!</p>
+
+
                 <p id="enemyhealth"> 10 </p>
                 <img id="enemysprite" src="pic/slime.gif" alt="Enemy Sprite">
             </div>
@@ -63,22 +75,33 @@
                 <!--double xp and gold-->
                 <img src="pic/richguy.png">
 
-                <div class="menu" id="menu">
-                    <a href="index.html"><button id="submit">Title Screen</button></a>
-                    <a href="uigp.html"><button id="submit">Menu</button></a>
-                    <a href="uigp.html"><button id="submit">Save</button></a>
-                </div>
-                
             </div>
         </div>
 
         <!--all right divs-->
-        <div class="party" id="party">
+        <div class="right">
+        
+        
+        <div id="party">
             <h1>Party</h1>
             <h3 id="username">player</h3>
             <p style="display: inline; padding-right: 0px; margin-right: 0px;">User #1 XP:</p>
             <p id="xp" style="display: inline; padding-left: 0px; margin-left: 0px;">0</p>
         </div>
+
+        <div id="party"></div>
+
+
+        </div>
+
+
+        <!-- 
+            <div class="party" id="party">
+            <h1>Party</h1>
+            <h3 id="username">player</h3>
+            <p style="display: inline; padding-right: 0px; margin-right: 0px;">User #1 XP:</p>
+            <p id="xp" style="display: inline; padding-left: 0px; margin-left: 0px;">0</p>
+        </div> -->
 
 
     </div>
