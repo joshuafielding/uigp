@@ -182,8 +182,9 @@ function quests(enemy) {
     let questenemyName = questenemy.substring(questenemy.indexOf('pic/') + 4);
     questenemyName = questenemyName.substring(0, questenemyName.lastIndexOf('.'));
     document.getElementById("questenemy").textContent = questenemyName + "s";
+    document.getElementById("questenemyname").textContent = questenemyName;
 
-    document.getElementById("questnum").textContent = questnum;
+    document.getElementById("questnum").textContent = "#" + questnum + ": ";
 
     if (questenemy === enemy) {
         questkill++;
