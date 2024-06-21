@@ -101,7 +101,7 @@ p, h1, h3 {
 
     background-size: cover;
     background-position: center;
-    /*background-image: url(pic/sewer.jpg);*/
+    /* background-image: url(pic/sewer.jpg); */
 
     border-radius: 15px;
     padding: 10px;
@@ -144,7 +144,6 @@ p, h1, h3 {
     padding: 1vh;
     margin-left: 2%;
 }
-
 
 #spells img:hover{
     animation-name: scalingTime;
@@ -200,4 +199,18 @@ p, h1, h3 {
     #enemyhealth {
         width: 50%;
     }
+}
+
+/* added by sam from homepage.css */
+#submit{
+    font-family: Alhkemikal;
+    background-color: hsla(0, 0%, 0%, 0.535);
+    border-radius: 15px;
+    text-align: center;
+    justify-content: center;
+    border: 0.5vh solid black;
+    font-size: 2vh;
+    /* text-shadow: -3px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000, 3px 3px 0 #000; */
+    color: white;
+    padding: 1vh;
 }
