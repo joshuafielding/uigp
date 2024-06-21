@@ -1,5 +1,5 @@
 body {
-    background-image: url(pic/meadow.jpeg);
+    background-image: url(pic/sewer2.png);
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
@@ -41,7 +41,7 @@ p, h1, h3 {
     background-color: #B88566;
     border: 3px solid #491D04;
     border-radius: 15px;
-    margin-bottom: 20vh;
+    margin-bottom: 10vh;
     padding: 2vh;
 }
 .gold #gold{
@@ -56,13 +56,19 @@ p, h1, h3 {
     height: fit-content;
 }
 
-.quest-box{
-    padding-left: 2vh;
-    margin-top: 0px;
-    margin: 0px;
-    display: inline;
+
+.quest-box, #quest, #questnum, #killsneeded, #questenemy{
+    padding-left: 1vh;
+    margin-top: -20px;
+    font-size: 20px;
+    margin-left: -2px;
+    display: inline-block;
 }
 
+#challenge{
+    display: inline-block;
+    font-size: 17px;
+}
 
 .center {
     flex-grow: 1;
@@ -71,6 +77,7 @@ p, h1, h3 {
     align-items: center;
     justify-content: center;
     margin-top: 6%;
+    margin-left: 25px;
 }
 
 
@@ -79,9 +86,9 @@ p, h1, h3 {
     text-align: center;
     width: 59%;
     height: 2vh;
-    background-color: rgba(255, 0, 0, 0.661);
     margin: 15px;
     margin-right: 25px;
+    background-color: rgba(255, 0, 0, 0.661);
     border: 2px solid rgb(79, 0, 0);
     padding: 10px;
     max-width: 50%;
@@ -95,6 +102,7 @@ p, h1, h3 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 30px;
 
     /*MOVES ENEMY TO THE BOTTOM OF THE ENEMY CONTAINER*/
     justify-content: flex-end;
@@ -158,19 +166,38 @@ p, h1, h3 {
 }
 
 
-.party {
+.right {
     color: white;
-    width: 20%;
-    min-width: 150px;
-    min-height: 30%;
+    width: 25%;
+    min-width: 125px;
+    min-height: 100%;
     height: auto;
-    background-color: #B88566;
     border-radius: 15px;
     padding: 10px;
     box-sizing: border-box;
-    border: 3px solid #491D04;
-    margin-bottom: 30%;
-    margin-right: 1%;
+    margin-bottom: 0%;
+    margin-right: -1%;
+}
+
+#party{
+    width: 90%;
+    min-width: 150px;
+    min-height: 30%;
+    border-radius: 15px;
+    background-color: #B88566;
+    border: 3px solid rgb(79, 0, 0);
+    height: 150px;
+    margin-bottom: 13%;
+}
+
+#party{
+    width: 90%;
+    min-width: 150px;
+    min-height: 30%;
+    border-radius: 15px;
+    background-color: #B88566;
+    border: 3px solid rgb(79, 0, 0);
+    height: 150px;
 }
 
 /* Media Queries */
@@ -181,7 +208,7 @@ p, h1, h3 {
         align-items: stretch;
     }
 
-    .left, .party {
+    .left, .right {
         width: 90%;
         margin-bottom: 10px;
     }
@@ -204,13 +231,28 @@ p, h1, h3 {
 /* added by sam from homepage.css */
 #submit{
     font-family: Alhkemikal;
-    background-color: hsla(0, 0%, 0%, 0.535);
+    background-color: #B88566;
     border-radius: 15px;
     text-align: center;
     justify-content: center;
-    border: 0.5vh solid black;
-    font-size: 2vh;
+    border: 3px solid #491D04;
+    font-size: 2.5vh;
     /* text-shadow: -3px -3px 0 #000, 3px -3px 0 #000, -3px 3px 0 #000, 3px 3px 0 #000; */
     color: white;
-    padding: 1vh;
+    padding: 1.5vh;
+    margin-left: 15px;
+
+   transition: background-color 0.25s;
+}
+
+#menu{
+    text-align: center;
+    margin-top: -125px;
+    margin-right: 30px;
+
+}
+
+#submit:hover{
+    background-color: firebrick;
+    cursor: pointer;
 }
