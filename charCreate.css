@@ -1,0 +1,228 @@
+@font-face {
+    font-family: Alhkemikal;
+    src: url("fonts/Alkhemikal.ttf");
+}
+
+h1 {
+    margin: 1vh;
+    font-size: 4vh;
+    color: #B88566;
+    text-shadow: 3px 3px 0 #000;
+}
+
+body {
+    background-image: url(pic/backgrounds/nighttimebignotgif.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-family: Alhkemikal;
+}
+
+.submit {
+    font-family: Alhkemikal;
+    background-color: #B88566;
+    border-radius: 15px;
+    text-align: center;
+    justify-content: center;
+    height: 7vh;
+    width: 10vh;
+    text-shadow: 3px 3px 0 #000;
+    border: 0.5vh solid black;
+    font-size: 4vh;
+    color: white;
+    padding: 1vh;
+}
+
+.herocontainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.heroslot {
+    height: 70vh;
+    width: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-image: url('pic/manuscript.png');
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.dropdowns {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    margin: -50px;
+}
+
+.dropdowns .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdowns .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    text-shadow: 1px 1px 0 #000;
+    min-width: 16vh;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    text-align: center;
+    border: 0.5vh solid black;
+    font-size: larger;
+}
+
+.dropdowns .dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdowns .dropdown-content a:hover {
+    background-color: #edb694;
+}
+
+.dropdowns .dropdown:hover .dropdown-content {
+    display: block;
+    background-color: #B88566;
+}
+
+.dropdowns button {
+    font-family: Alhkemikal;
+    background-color: #B88566;
+    border-radius: 15px;
+    text-align: center;
+    justify-content: center;
+    height: 7vh;
+    width: 17vh;
+    text-shadow: 3px 3px 0 #000;
+    border: 0.5vh solid black;
+    font-size: 4vh;
+    color: white;
+    padding: 1vh;
+    margin-bottom: 1vh;
+}
+
+#username {
+    border-radius: 15px;
+}
+
+#SaveChar {
+    position: absolute;
+    bottom: 25vh;
+}
+
+.container {
+    padding-top: 3vh;
+    position: relative;
+    height: 20vh;
+    width: 40%;
+}
+
+.layer1 {
+    width: 23vh;
+    position: absolute;
+    display: flex;
+    z-index: 0;
+}
+
+.layer2 {
+    width: 35vh;
+    position: absolute;
+    top: -8.4vh;
+    left: -6vh;
+    display: flex;
+    z-index: 2;
+}
+
+.layer3 {
+    width: 23vh;
+    position: absolute;
+    display: flex;
+    z-index: 1;
+}
+
+.layer4 {
+    width: 24vh;
+    position: absolute;
+    left: -0.5vh;
+    display: flex;
+    z-index: 1;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 3;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #B88566;
+    margin-top: 10%;
+    margin-left: 10%;
+    padding: 20px;
+    border: 3px solid #000000;
+    width: 30%;
+    height: 53%;
+    text-align: center;
+    border-radius: 15px;
+    overflow-y: scroll;
+}
+
+.close {
+    color: #000000;
+    float: right;
+    font-size: 5vh;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#searchInput {
+    width: 50%;
+    background-color: #edb694;
+    color: black;
+    padding: 12px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    border: 1px solid #000000;
+}
+
+.option {
+    padding: 12px;
+    color: white;
+    font-size: x-large;
+    border-bottom: 1px solid #000000;
+}
+
+.option:hover {
+    background-color: #edb694;
+}

@@ -1,0 +1,185 @@
+@font-face {
+    font-family: Alhkemikal;
+    src: url("fonts/Alkhemikal.ttf");
+}
+h1{
+    margin: 1vh;
+    font-size: 7vh;
+    color: #B88566;
+    text-shadow: 3px 3px 0 #000;
+}
+body {
+    background-image: url(pic/backgrounds/nighttimebignotgif.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-family: Alhkemikal;
+}
+
+.center-bottom-tutorial {
+    position: absolute;
+    bottom: 20px; /* Adjust the distance from the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.submit{
+    font-family: Alhkemikal;
+    background-color: #B88566;
+    border-radius: 15px;
+    text-align: center;
+    justify-content: center;
+    height: 7vh;
+    width: 10vh;
+    text-shadow: 3px 3px 0 #000;
+    border: 0.5vh solid black;
+    font-size: 4vh;
+    color: white;
+    padding: 1vh;
+    z-index: 2;
+}
+
+#tutorial-button{
+    font-family: Alhkemikal;
+    background-color: #B88566;
+    border-radius: 15px;
+    text-align: center;
+    justify-content: center;
+    height: 7vh;
+    width: auto;
+    text-shadow: 3px 3px 0 #000;
+    border: 0.5vh solid black;
+    font-size: 4vh;
+    color: white;
+    padding: 1vh;
+}
+
+.herocontainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; /*Adjust spacing between hero slots */
+    align-items: center; /* Align items vertically if needed */
+    height: 100vh; 
+}
+
+.heroslot {
+    height: 70vh;
+    width: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    background-size: cover;
+    background-position: center;
+    background-image: url('pic/manuscript.png');
+    border-radius: 15px;
+    padding: 10px;
+}
+
+/* Popup container - can be anything you want */
+.popup {
+font-family: Alhkemikal;
+background-color: #B88566;
+border-radius: 15px;
+text-align: center;
+justify-content: center;
+height: 6vh;
+width: 9vh;
+border: 0.5vh solid black;
+text-shadow: 3px 3px 0 #000;
+font-size: 4vh;
+color: white;
+position: relative;
+display: inline-block;
+cursor: pointer;
+}
+
+/* The actual popup */
+.popup .popuptext {
+visibility: hidden;
+width: 160px;
+background-color: #555;
+color: #fff;
+text-align: center;
+border-radius: 6px;
+padding: 8px 0;
+position: absolute;
+z-index: 1;
+bottom: 125%;
+left: 50%;
+margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+content: "";
+position: absolute;
+top: 100%;
+left: 50%;
+margin-left: -5px;
+border-width: 5px;
+border-style: solid;
+border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+visibility: visible;
+-webkit-animation: fadeIn 1s;
+animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+from {opacity: 0;} 
+to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+from {opacity: 0;}
+to {opacity:1 ;}
+}
+
+.container {
+    position: relative;
+    height: 20vh;
+    width: 40%;
+    margin: 4vh;
+}
+
+.layer1 {
+    width: 23vh;
+    position: absolute;
+    display: flex;
+    z-index: 0;
+}
+
+.layer2 {
+    width: 35vh;
+    position: absolute;
+    top: -11.4vh;
+    left: -6.1vh;
+    display: flex;
+    z-index: 2;
+}
+
+.layer3 {
+    width: 23vh;
+    position: absolute;
+    display: flex;
+    z-index: 1;
+}
+
+.layer4 {
+    width: 24vh;
+    position: absolute;
+    left: -0.5vh;
+    display: flex;
+    z-index: 1;
+}
+
+.temp{
+    width: 25vh;
+}

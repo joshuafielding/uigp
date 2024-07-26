@@ -1,0 +1,194 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Alhkemikal;
+    src: url("fonts/Alkhemikal.ttf");
+}
+
+h1{
+    margin: 1vh;
+    font-size: 5vh;
+    color: #B88566;
+    text-shadow: 3px 3px 0 #000;
+}
+
+p{
+    margin: 1vh;
+    font-size: 3vh;
+    color: black;
+    /* text-shadow: 3px 3px 0 #000; */
+}
+
+body {
+    background-image: url(pic/backgrounds/gameTut3.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-family: Alhkemikal;
+}
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 5vh;
+}
+
+#submit{
+    font-family: Alhkemikal;
+    background-color: #B88566;
+    border-radius: 15px;
+    text-align: center;
+    justify-content: center;
+    height: 7vh;
+    width: auto;
+    text-shadow: 3px 3px 0 #000;
+    border: 0.5vh solid black;
+    font-size: 3vh;
+    color: white;
+    padding: 1vh;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 225%);
+    border: 1px solid black;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: rgb(231, 209, 146);
+    /* background-image: url(pic/manuscriptLong.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto; */
+    width: 500px;
+    max-width: 80%;
+}
+
+.modal1 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 100%);
+    border: 1px solid black;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: rgb(231, 209, 146);
+    /* background-image: url(pic/manuscriptLong.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto; */
+    width: 500px;
+    max-width: 80%;
+}
+
+.modal2 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-75%, -230%);
+    border: 1px solid black;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: rgb(231, 209, 146);
+    /* background-image: url(pic/manuscriptLong.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto; */
+    width: 500px;
+    max-width: 80%;
+}
+
+.modal3 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-80%, -20%);
+    border: 1px solid black;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: rgb(231, 209, 146);
+    /* background-image: url(pic/manuscriptLong.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto; */
+    width: 500px;
+    max-width: 80%;
+}
+
+.modal4 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-35%, -270%);
+    border: 1px solid black;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: rgb(231, 209, 146);
+    /* background-image: url(pic/manuscriptLong.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto; */
+    width: 500px;
+    max-width: 80%;
+}
+
+.modal5 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-35%, -10%);
+    border: 1px solid black;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: rgb(231, 209, 146);
+    /* background-image: url(pic/manuscriptLong.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto; */
+    width: 500px;
+    max-width: 80%;
+}
+
+.modal6 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-110%, -375%);
+    border: 1px solid black;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: rgb(231, 209, 146);
+    /* background-image: url(pic/manuscriptLong.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto; */
+    width: 500px;
+    max-width: 80%;
+}
+
+.modal-header{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.modal-body{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}

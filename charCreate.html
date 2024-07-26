@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>char create</title>
+    <link rel="stylesheet" href="charCreate.css">
+</head>
+<body>
+    <div class="herocontainer">
+        <div class="dropdowns">
+            <div class="dropdown">
+                <button id="hair" onclick="openModal('hair')">Hair</button>
+            </div>
+            <div class="dropdown">
+                <button id="eyebrows" onclick="openModal('eyebrows')">Eyebrows</button>
+            </div>
+            <div class="dropdown">
+                <button id="eyes" onclick="openModal('eyes')">Eyes</button>
+            </div>
+            <div class="dropdown">
+                <button id="mouth" onclick="openModal('mouth')">Mouth</button>
+            </div>
+            <div class="dropdown">
+                <button id="Body" onclick="openModal('body')">Body</button>
+            </div>
+        </div>
+        <div class="heroslot" id="slot2">
+            <div class="container" style="margin-top: 16vh;">
+                <img id="body" class="layer1" src="pic/character/body/White.png">
+                <img id="Hair" class="layer2" src="pic/character/hair/short_middle_part_white.png">
+                <img id="Brows" class="layer3" src="pic/character/brows/neutral.png">
+                <img id="Eyes" class="layer4" src="pic/character/eyes/happy.png">
+                <img id="Mouth" class="layer4" src="pic/character/mouth/-.png">
+            </div>
+            <button id="SaveChar" class="submit" style="z-index: 3;">Save</button>
+        </div>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <input type="text" id="searchInput" onkeyup="filterOptions()" placeholder="Search for options..">
+            <div id="optionsContainer"></div>
+        </div>
+    </div>
+
+    <script src="charCreate.js"></script>
+</body>
+</html>
